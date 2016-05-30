@@ -20,6 +20,13 @@ namespace MultiClipboard
         protected override void OnStart(string[] args)
         {
             Debug.WriteLine("Start");
+            var native = new NativeKeyHooks();
+            native.KeyPressed += native_KeyPressed;
+        }
+
+        void native_KeyPressed(object sender, KeyPressedEventArgs e)
+        {
+            Debug.WriteLine(e.Key);
         }
 
         protected override void OnStop()

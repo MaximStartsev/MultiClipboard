@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ServiceTest
 {
-    class TestWrapper
+    class TestWrapper: MultiClipboard.MultiClipboardService
     {
+        public void TestStart(string[] args)
+        {
+            OnStart(args);
+        }
+
+        public void TestStop()
+        {
+            OnStop();
+        }
     }
 }

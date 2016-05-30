@@ -1,33 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MultiClipboard;
 
 namespace ServiceTest
 {
     public partial class Form1 : Form
     {
-        private MultiClipboardService _service;
+        private readonly TestWrapper _service;
         public Form1()
         {
             InitializeComponent();
-            _service = new MultiClipboardService();
+            _service = new TestWrapper();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //_service.
+           _service.TestStart(new string[0]);
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            _service.Stop();
+            _service.TestStop();
         }
     }
 }
