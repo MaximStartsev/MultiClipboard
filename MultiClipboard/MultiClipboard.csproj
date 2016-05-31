@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalKeyboardHook.cs" />
     <Compile Include="MultiClipboardService.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MultiClipboardService.Designer.cs">
       <DependentUpon>MultiClipboardService.cs</DependentUpon>
     </Compile>
-    <Compile Include="NativeKeyHooks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
